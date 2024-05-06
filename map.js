@@ -11,10 +11,7 @@ ymaps.ready(['Panel']).then(function () {
      * Конструктор, создающий собственный слой.
      */
     var Layer = function () {
-        // var layer = new ymaps.Layer('images/tiles/%z/%yx%x.png', {
-
-        // new
-        var layer = new ymaps.Layer('https://disk.yandex.ru/d/o3-w5lo5px7rmA/images/tiles/%z/%yx%x.png', {
+        var layer = new ymaps.Layer('images/tiles/%z/%yx%x.png', {
             // Если есть необходимость показать собственное изображение в местах неподгрузившихся тайлов,
             // раскомментируйте эту строчку и укажите ссылку на изображение.
             // notFoundTile: 'url'
