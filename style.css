@@ -12,8 +12,16 @@ body,
     background-color: #fff;
     padding: 5px;
     border-radius: 3px;
-    max-width: 250px;
+    /* max-width: 250px; */
+    width: 100%;
+    max-width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767.98px) {
+    .customControl {
+        max-width: 100%;
+    }
 }
 
 .closeButton {
@@ -29,9 +37,8 @@ body,
 
 .content {
     padding: 5px;
-
     /* max-height: 250px; */
-    max-height: 600px;
+    /* max-height: 600px; */
     overflow: auto;
 }
 
@@ -41,9 +48,31 @@ a:visited {
     text-decoration: none !important;
 }
 
-/* .btn-map {
+.btn-map {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-map__minus {
+    margin-bottom: 15px;
+}
+
+.btn-map img {
+    width: 20px;
+    height: 20px;
+}
+
+/* MOBILE */
+/* @media (max-width: 767.98px) {
+    .btn-map {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 } */

@@ -61,9 +61,14 @@ ymaps.ready(['Panel']).then(function () {
         });
 
     // Создадим пользовательский макет ползунка масштаба.
+    // ZoomLayout = ymaps.templateLayoutFactory.createClass("<div>" +
+    //     "<div id='zoom-in' class='btn btn-map'><i class='icon-plus'></i></div>" +
+    //     "<div id='zoom-out' class='btn btn-map'><i class='icon-minus'></i></div>" +
+    //     "</div>", {
+
     ZoomLayout = ymaps.templateLayoutFactory.createClass("<div>" +
-        "<div id='zoom-in' class='btn btn-map'><i class='icon-plus'></i></div><br>" +
-        "<div id='zoom-out' class='btn btn-map'><i class='icon-minus'></i></div>" +
+        "<div id='zoom-in' class='btn-map btn-map__minus'><img src='images/minus.png'></div>" +
+        "<div id='zoom-out' class='btn-map btn-map__plus'><img src='images/plus.png'></div>" +
         "</div>", {
 
         // Переопределяем методы макета, чтобы выполнять дополнительные действия
@@ -101,12 +106,12 @@ ymaps.ready(['Panel']).then(function () {
             map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
         }
     }),
-        zoomControl = new ymaps.control.ZoomControl({ options: { layout: ZoomLayout, position: { right: 0, top: 200 } } });
+        zoomControl = new ymaps.control.ZoomControl({ options: { layout: ZoomLayout, position: { right: 0, bottom: 200 } } });
 
-    // map.controls.add(zoomControl);
-
-    var zoomControl = new ymaps.control.ZoomControl({ options: { position: { right: 0, top: 0 } } });
     map.controls.add(zoomControl);
+
+    // var zoomControl = new ymaps.control.ZoomControl({ options: { position: { right: 0, top: 0 } } });
+    // map.controls.add(zoomControl);
 
     // Метки
     // Создадим контент для меток.
