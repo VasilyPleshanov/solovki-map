@@ -67,8 +67,8 @@ ymaps.ready(['Panel']).then(function () {
     //     "</div>", {
 
     ZoomLayout = ymaps.templateLayoutFactory.createClass("<div>" +
-        "<div id='zoom-in' class='btn-map btn-map__minus'><img src='images/minus.png'></div>" +
-        "<div id='zoom-out' class='btn-map btn-map__plus'><img src='images/plus.png'></div>" +
+        "<div id='zoom-in' class='btn-map btn-map__plus'><img src='images/plus.png'></div>" +
+        "<div id='zoom-out' class='btn-map btn-map__minus'><img src='images/minus.png'></div>" +
         "</div>", {
 
         // Переопределяем методы макета, чтобы выполнять дополнительные действия
@@ -106,7 +106,7 @@ ymaps.ready(['Panel']).then(function () {
             map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
         }
     }),
-        zoomControl = new ymaps.control.ZoomControl({ options: { layout: ZoomLayout, position: { right: 0, bottom: 200 } } });
+        zoomControl = new ymaps.control.ZoomControl({ options: { layout: ZoomLayout, position: { right: 10, bottom: 100 } } });
 
     map.controls.add(zoomControl);
 
